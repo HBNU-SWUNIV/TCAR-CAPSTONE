@@ -1,0 +1,34 @@
+.status-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4개의 열로 구성 */
+    gap: 20px;
+    color: var(--text-primary);
+}
+
+.status-box {
+    background-color: var(--bg-medium);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid var(--bg-light);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+}
+
+.status-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.status-box h3 {
+    margin: 0 0 15px 0;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: normal;
+}
+
+.status-box p {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--accent-blue);
+}

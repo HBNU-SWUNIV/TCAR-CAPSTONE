@@ -1,0 +1,152 @@
+/* MainPage와 동일한 색상 변수 */
+:root {
+  --primary-color: #4a6cf8;
+  --primary-dark-color: #3b57e0; /* 호버 시 사용할 더 진한 파란색 */
+  --text-dark: #222;
+  --text-light: #555;
+  --border-color: #e0e0e0;
+  --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* --- 배경 효과 --- */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient-flow 15s ease infinite;
+}
+
+/* --- 로그인 폼 카드 --- */
+.login-form-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 50px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  text-align: left;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeIn-up 0.6s ease-out forwards;
+}
+
+/* 'Email', 'Password' 등 입력 필드 그룹 */
+.input-group {
+  margin-bottom: 25px;
+}
+
+/* 입력창 제목 */
+.inputTitle {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* 실제 입력 필드 */
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(74, 108, 248, 0.2);
+}
+
+/* 에러 메시지 */
+.errorMessageWrap {
+  font-size: 0.8rem;
+  color: #e73c7e;
+  min-height: 18px;
+  padding-top: 4px;
+}
+
+/* --- 버튼 --- */
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+/* 공통 버튼 스타일 */
+.auth-button {
+  flex: 1;
+  padding: 14px;
+  border-radius: 8px;
+  /* --- ✨ 1. 글자 크기 수정 --- */
+  font-size: 1.1rem; /* 1rem -> 1.1rem으로 크기 증가 */
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid;
+  transition: all 0.2s ease;
+}
+.auth-button:disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* --- 로그인 버튼 색상 수정 --- */
+/* 로그인 버튼 (채워진 스타일) */
+.login-button {
+  background-color: var(--primary-color); /* 검은색 -> 파란색 */
+  color: white;
+  border-color: var(--primary-color); /* 검은색 -> 파란색 */
+}
+.login-button:hover:not(:disabled) {
+  background-color: var(--primary-dark-color); /* 더 진한 파란색 */
+  transform: translateY(-2px);
+}
+
+/* --- 회원가입 버튼 색상 수정 --- */
+/* 회원가입 버튼 (테두리 스타일) */
+.signup-button {
+  background-color: white;
+  color: var(--primary-color); /* 검은색 -> 파란색 */
+  border-color: var(--primary-color); /* 회색 -> 파란색 */
+}
+.signup-button:hover {
+  background-color: #f8f9fa;
+  border-color: var(--primary-dark-color);
+}
+
+
+/* 비밀번호 찾기 링크 */
+.forgot-password-link {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-light);
+  text-decoration: none;
+  cursor: pointer;
+}
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+/* --- 애니메이션 --- */
+@keyframes fadeIn-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradient-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
