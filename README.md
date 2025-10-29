@@ -44,6 +44,9 @@
   - 정보보안 실습 및 SW 개발 교육에 즉각적인 실습 환경으로 활용
   - 기업용 임시 테스트 환경 및 보안 검증에 활용
   - 자동 리소스 정리를 통한 관리 부담 및 인프라 비용 절감
+
+<img width="1286" height="638" alt="image" src="https://github.com/user-attachments/assets/1ff5519b-b59a-4c53-8811-f796559a719e" />
+
   
 ## Project Outcome
 - ### 20XX 년 OO학술대회 
