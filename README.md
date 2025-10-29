@@ -7,11 +7,17 @@
 
 ## <u>Teamate</u> Project Background
 - ### 필요성
-  - OOO
-  - OOO
+  - OS를 직접 설치하는 과정의 복잡성
+  - AWS, GCP 등 클라우드 서비스의 높은 비용과 복잡한 설정 문제
+  - 기존 웹 기반 가상화 솔루션의 낮은 성능
+  - 클릭 한 번으로 OS를 즉시 실행하고 자동 종료되는 1회용 가상 머신 서비스 필요
+    
 - ### 기존 해결책의 문제점
-  - OOO
-  - OOO
+  - QEMU 등 가상화 기술은 유연하지만 성능이 느림
+  - 도커와 같은 컨테이너 기술은 강력하지만, 초보자가 다루기 어려움
+  - 클라우드 서비스(AWS, GCP)는 높은 비용과 복잡한 설정이 진입 장벽
+  - JSLinux 등은 실사용이 어려울 정도로 성능이 낮음
+  - Replit, 구름IDE 등은 IDE에 한정되어 범용적인 OS 환경 제공 미흡
   
 ## System Design
   - ### System Requirements
@@ -19,12 +25,25 @@
     - OOO
     
 ## Case Study
-  - ### Description
-  
+  - 1. AWS 기반 시스템 아키텍처 및 인증 구조
+  <img width="1108" height="612" alt="image" src="https://github.com/user-attachments/assets/922bc9a4-5ea8-4fe4-81ba-81a3832d9048" />
+
+<img width="1089" height="806" alt="image" src="https://github.com/user-attachments/assets/f181f194-e1e4-4d0c-a9d6-2d933dd1c5ef" />
+
+  - 2. 가상서버 생성 시나리오 및 핵심 알고리즘
+<img width="953" height="660" alt="image" src="https://github.com/user-attachments/assets/e659fa5e-7aac-4b35-a98a-bd290a37fe6f" />
+
+<img width="962" height="620" alt="image" src="https://github.com/user-attachments/assets/81a89c02-eac2-4b52-9a85-13be618e4551" />
+
+<img width="946" height="595" alt="image" src="https://github.com/user-attachments/assets/bc492ed8-6fb8-4902-8572-e00a0ca0053f" />
+
+
   
 ## Conclusion
-  - ### OOO
-  - ### OOO
+  - 복잡한 설정이나 비용 부담 없는 간편한 가상 환경 제공
+  - 정보보안 실습 및 SW 개발 교육에 즉각적인 실습 환경으로 활용
+  - 기업용 임시 테스트 환경 및 보안 검증에 활용
+  - 자동 리소스 정리를 통한 관리 부담 및 인프라 비용 절감
   
 ## Project Outcome
 - ### 20XX 년 OO학술대회 
